@@ -6,7 +6,7 @@ export const loadTasks = () => new Promise(resolve => {
     setTimeout(() => {
         resolve([
             { id: uuid(), title: 'Ознакомиться с проектом', closed: false },
-            { id: uuid(), title: 'Переписать проект на Redux', closed: false }
+            { id: uuid(), title: 'Переписать проект на Redux', closed: false },
         ])
     }, TIMEOUT)
 })

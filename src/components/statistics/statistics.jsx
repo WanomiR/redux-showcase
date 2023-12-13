@@ -1,7 +1,9 @@
 import './statistics.css'
 import { useMemo } from 'react'
+import { useSelector } from 'react-redux'
 
-const Statistics = ({ tasks }) => {
+const Statistics = () => {
+    const tasks = useSelector(state => state.tasks)
     const openedCount = useMemo(() => tasks.filter(task => !task.closed).length, [tasks])
     const closedCount = useMemo(() => tasks.length - openedCount, [tasks, openedCount])
 

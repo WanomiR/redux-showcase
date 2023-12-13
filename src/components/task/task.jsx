@@ -1,17 +1,22 @@
 import './task.css'
+import { useDispatch } from 'react-redux'
+import { closeTask, removeTask } from '../../services/actions/tasks'
 
-const Task = ({ task, closeTask, removeTask }) => {
+const Task = ({ task }) => {
+    const dispatch = useDispatch()
+
     const handleTaskCloseClick = () => {
-        closeTask(task.id)
+        dispatch(closeTask(task.id))
     }
 
     const handleTaskRemoveClick = () => {
-        removeTask(task.id)
+        dispatch(removeTask(task.id))
     }
 
     return <div className={'task ' + (task.closed ? 'closed' : '')}>
         <h3 className="task-title">{task.title}</h3>
-        {!task.closed && <button className="task-button" type="button" onClick={handleTaskCloseClick}>Выполнить</button>}
+        {!task.closed &&
+            <button className="task-button" type="button" onClick={handleTaskCloseClick}>Выполнить</button>}
         <button className="task-button" type="button" onClick={handleTaskRemoveClick}>Удалить</button>
     </div>
 }
