@@ -1,14 +1,17 @@
 import { useRef, useState } from 'react'
 import './task-form.css'
+import { useDispatch } from 'react-redux'
+import { createTask } from '../../services/slices/tasks'
 
-const TaskForm = ({ addTask }) => {
+const TaskForm = () => {
     const [taskTitle, setTaskTitle] = useState('')
     const taskTitleRef = useRef()
+    const dispatch = useDispatch()
 
     const handleTaskSubmit = (event) => {
         event.preventDefault()
 
-        addTask(taskTitle)
+        dispatch(createTask(taskTitle))
         setTaskTitle('')
         taskTitleRef.current?.focus()
     }
