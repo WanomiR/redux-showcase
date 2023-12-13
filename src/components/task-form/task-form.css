@@ -1,0 +1,15 @@
+.task-form {
+  background-color: whitesmoke;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.task-form-title {
+  margin: 0 0 20px;
+}
+
+.task-form-form {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}

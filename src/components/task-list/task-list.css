@@ -1,0 +1,22 @@
+.task-list {
+  padding: 20px;
+}
+
+.task-list-title {
+  margin: 0 0 20px;
+}
+
+.task-list-list {
+  list-style: none;
+  margin: 0 -20px;
+  padding: 0;
+}
+
+.task-list-list li {
+  border-radius: 4px;
+  padding: 10px 20px;
+}
+
+.task-list-list li:hover {
+  background-color: whitesmoke;
+}

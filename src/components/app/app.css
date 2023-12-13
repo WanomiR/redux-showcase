@@ -1,0 +1,26 @@
+.app {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.app-main {
+  align-items: stretch;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+}
+
+.app-title {
+  margin: 0;
+}
+
+.app-tools {
+  align-items: stretch;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}

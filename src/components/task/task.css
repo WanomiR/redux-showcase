@@ -1,0 +1,23 @@
+.task {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.task-title {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.task.closed .task-title {
+  color: green;
+}
+
+.task-button {
+  opacity: 0;
+}
+
+.task:hover .task-button {
+  opacity: 1;
+}
